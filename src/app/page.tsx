@@ -6,8 +6,6 @@ import positionsRaw from '@/data/positions.json';
 import ScatterGraph from '@/components/ScatterGraph';
 import BoardView from '@/components/BoardView';
 import { getChessComAnalysisUrl } from '@/utils';
-
-// TypeScript Interface
 interface PositionData {
   id: number;
   fen: string;
@@ -16,7 +14,6 @@ interface PositionData {
 }
 
 const positions = positionsRaw as PositionData[];
-
 
 export default function ChessAtlas() {
   const [ activeId, setActiveId ] = useState<number>(positions.length > 0 ? positions[ 0 ].id : 0);
