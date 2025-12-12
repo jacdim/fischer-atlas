@@ -89,7 +89,7 @@ export default function ChessAtlas() {
               rel="noreferrer"
               className="block w-full text-center py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-colors mt-4"
             >
-              Analyze on Lichess &rarr;
+              Analyse on Lichess
             </a>
           </div>
         </div>
