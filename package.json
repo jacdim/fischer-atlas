@@ -9,12 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "chess.js": "^1.4.0",
+    "lodash": "^4.17.21",
     "next": "16.0.10",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-chessboard": "^5.8.6",
+    "react-dom": "19.2.1",
+    "recharts": "^3.5.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/lodash": "^4.17.21",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -13,6 +13,13 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "noImplicitAny": true,
+    "suppressExcessPropertyErrors": false,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "downlevelIteration":true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "plugins": [
       {
         "name": "next"
