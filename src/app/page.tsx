@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-// We use a try/catch import strategy or default to empty array if file missing
 import positionsRaw from '@/data/positions.json';
 import ScatterGraph from '@/components/ScatterGraph';
 import BoardView from '@/components/BoardView';
