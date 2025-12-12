@@ -58,15 +58,15 @@ export default function ChessAtlas() {
       </section>
 
       {/* DASHBOARD GRID */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="flex flex-col lg:flex-row gap-8">
 
         {/* LEFT: BOARD */}
-        <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 flex justify-center items-center shadow-lg">
+        <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 flex justify-center items-center shadow-lg lg:w-auto shrink-0">
           <BoardView fen={activeData.fen} />
         </div>
 
         {/* RIGHT: DATA */}
-        <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 shadow-lg flex flex-col justify-center">
+        <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 shadow-lg flex flex-col justify-center flex-1">
           <div className="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
             <h3 className="text-3xl font-bold text-white">Position #{activeData.id + 1}</h3>
             <span className={`px-3 py-1 rounded-full text-sm font-bold border ${activeData.eval >= 0 ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30'}`}>
@@ -105,8 +105,7 @@ export default function ChessAtlas() {
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </div>    </main>
   );
 }
 
