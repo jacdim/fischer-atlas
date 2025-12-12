@@ -19,7 +19,7 @@ function getPointStyle(entry: Position, activeId: number) {
 
   const fill = isActive
     ? chartTheme.points.active
-    : entry.eval > 0.2
+    : entry.eval >= 0
       ? chartTheme.points.positive
       : chartTheme.points.other
 

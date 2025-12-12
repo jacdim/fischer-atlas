@@ -5,6 +5,7 @@ import { useState } from 'react';
 import positionsRaw from '@/data/positions.json';
 import ScatterGraph from '@/components/ScatterGraph';
 import BoardView from '@/components/BoardView';
+import { getChessComAnalysisUrl } from '@/utils';
 
 // TypeScript Interface
 interface PositionData {
@@ -68,7 +69,7 @@ export default function ChessAtlas() {
         <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 shadow-lg flex flex-col justify-center">
           <div className="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
             <h3 className="text-3xl font-bold text-white">Position #{activeData.id}</h3>
-            <span className={`px-3 py-1 rounded-full text-sm font-bold border ${activeData.eval > 0.2 ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30'}`}>
+            <span className={`px-3 py-1 rounded-full text-sm font-bold border ${activeData.eval >= 0 ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30'}`}>
               {activeData.eval > 0 ? `+${activeData.eval}` : activeData.eval}
             </span>
           </div>
@@ -84,14 +85,24 @@ export default function ChessAtlas() {
               </code>
             </div>
 
-            <a
-              href={`https://lichess.org/analysis/standard/${activeData.fen.replace(/ /g, "_")}`}
-              target="_blank"
-              rel="noreferrer"
-              className="block w-full text-center py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-colors mt-4"
-            >
-              Analyse on Lichess
-            </a>
+            <div className="flex gap-3 mt-4">
+              <a
+                href={`https://lichess.org/analysis/standard/${activeData.fen.replace(/ /g, "_")}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 text-center py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-colors"
+              >
+                Analyse on Lichess
+              </a>
+              <a
+                href={getChessComAnalysisUrl(activeData.fen)}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 text-center py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-lg transition-colors"
+              >
+                Analyse on Chess.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
