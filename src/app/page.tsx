@@ -3,7 +3,7 @@
 import { useState } from 'react';
 // We use a try/catch import strategy or default to empty array if file missing
 import positionsRaw from '@/data/positions.json';
-import ScatterVis from '@/components/ScatterVis';
+import ScatterGraph from '@/components/ScatterGraph';
 import BoardView from '@/components/BoardView';
 
 // TypeScript Interface
@@ -43,7 +43,7 @@ export default function ChessAtlas() {
         </div>
         <div className="h-64 w-full" style={{ minHeight: '300px', width: '100%' }}>
           {positions.length > 0 ? (
-            <ScatterVis
+            <ScatterGraph
               data={positions}
               onPointClick={(id) => setActiveId(id)}
               activeId={activeId}
