@@ -30,9 +30,9 @@ export default function ChessAtlas() {
     <main className="min-h-screen p-4 md:p-8 max-w-7xl mx-auto">
       <header className="mb-8 text-center">
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-          The Chess960 Atlas
+          The Fischer Atlas
         </h1>
-        <p className="text-slate-400">Exploring the fairness of Fischer Random Chess</p>
+        <p className="text-slate-400">Exploring the fairness of Chess960</p>
       </header>
 
       {/* CHART SECTION */}
