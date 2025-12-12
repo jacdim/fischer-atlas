@@ -68,7 +68,7 @@ export default function ChessAtlas() {
         <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 shadow-lg flex flex-col justify-center">
           <div className="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
             <h3 className="text-3xl font-bold text-white">Position #{activeData.id}</h3>
-            <span className={`px-3 py-1 rounded-full text-sm font-bold ${activeData.eval > 0.3 ? 'bg-red-900/50 text-red-200' : 'bg-green-900/50 text-green-200'}`}>
+            <span className={`px-3 py-1 rounded-full text-sm font-bold border ${activeData.eval > 0.2 ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30'}`}>
               {activeData.eval > 0 ? `+${activeData.eval}` : activeData.eval}
             </span>
           </div>
