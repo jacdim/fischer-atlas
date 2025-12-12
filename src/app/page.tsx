@@ -53,7 +53,8 @@ export default function ChessAtlas() {
               Loading Data...
             </div>
           )}
-        </div>      </section>
+        </div>
+      </section>
 
       {/* DASHBOARD GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
