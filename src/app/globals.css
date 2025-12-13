@@ -24,3 +24,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  /* Define the keyframes to move the background from right to left */
+  @keyframes text-shimmer {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      /* We move it by 200% because the background size will be 200% wide */
+      background-position: -200% 0;
+    }
+  }
+
+  /* Create the utility class to apply it */
+  .animate-text-shimmer {
+    animation: text-shimmer 8s ease-in-out infinite;
+  }
+}
